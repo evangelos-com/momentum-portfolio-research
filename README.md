@@ -1,10 +1,10 @@
 # Momentum Portfolio Research
 
-A momentum-based portfolio strategy that selects the top 3 performers by 90-day price momentum and rebalances monthly.
+A momentum-based equity strategy that selects the top 3 performers by 90-day price momentum with monthly rebalancing, implemented as a modular Python data pipeline using pandas and vectorized time-series transformations for backtesting.
 
 ## Technical Write-Up
 
-A detailed explanation of the system design, data pipeline, and pandas-based implementation is available here:
+A detailed explanation of the system design, data pipeline architecture, and pandas-based implementation:
 
 [Building a Simple Momentum Portfolio in Python](https://www.evangelos.com/posts/building-a-simple-momentum-portfolio-in-python--from-market-data-to-backtesting)
 
@@ -43,13 +43,24 @@ pip install -r requirements.txt
 python scripts/run_backtest.py
 ```
 
-## Strategy
+## Architecture
 
-- Downloads historical price data for 10 stocks (AAPL, MSFT, GOOG, AMZN, META, NVDA, TSLA, JPM, UNH, HD)
-- Computes 90-day momentum signal
-- Selects top 3 stocks by momentum
-- Equal-weight portfolio, rebalance monthly
-- Compares against SPY benchmark
+The system is implemented as a modular data pipeline that processes historical equity prices and evaluates a momentum-based trading strategy.
+
+- Downloads historical price data for 10 equities (AAPL, MSFT, GOOG, AMZN, META, NVDA, TSLA, JPM, UNH, HD)
+- Computes a 90-day momentum signal using rolling time-series transformations
+- Ranks assets cross-sectionally at each monthly rebalance date
+- Constructs an equal-weight portfolio from the top 3 ranked assets
+- Simulates portfolio performance over time using event-driven rebalancing logic
+- Compares strategy performance against SPY (a broad US stock market benchmark)
+
+The system is structured into three core components:
+
+- **Signal Engine**: Generates momentum signals from time-series price data using vectorized pandas operations
+- **Portfolio Builder**: Performs cross-sectional ranking and constructs portfolio weights at each rebalance point
+- **Backtest Engine**: Simulates portfolio performance over time using forward-filled weights and return aggregation
+
+Each component operates as a deterministic transformation over pandas DataFrames, improving testability, reproducibility, and making data flow explicit and traceable.
 
 ## Results (2020-2026)
 
