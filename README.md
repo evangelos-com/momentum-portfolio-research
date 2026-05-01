@@ -2,6 +2,12 @@
 
 A momentum-based portfolio strategy that selects the top 3 performers by 90-day price momentum and rebalances monthly.
 
+## Technical Write-Up
+
+A detailed explanation of the system design, data pipeline, and pandas-based implementation is available here:
+
+[Building a Simple Momentum Portfolio in Python](https://www.evangelos.com/posts/building-a-simple-momentum-portfolio-in-python--from-market-data-to-backtesting)
+
 ## Installation
 
 ### 1. Clone the repository
