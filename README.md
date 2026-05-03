@@ -1,6 +1,10 @@
 # Momentum Portfolio Research
 
-A momentum-based equity strategy that selects the top 3 performers by 90-day price momentum with monthly rebalancing, implemented as a modular Python data pipeline using pandas and vectorized time-series transformations for backtesting.
+A simple momentum-based equity strategy implemented as a modular Python data pipeline.
+
+The system selects the top 3 assets by 90-day price momentum and rebalances monthly, using pandas and vectorized time-series transformations for backtesting.
+
+The strategy is a basic cross-sectional momentum approach (see Jegadeesh and Titman, 1993), with the focus here on implementation and system design rather than signal innovation.
 
 ## Technical Write-Up
 
