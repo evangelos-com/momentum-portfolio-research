@@ -4,7 +4,9 @@ A simple momentum-based equity strategy implemented as a modular Python data pip
 
 The system selects the top 3 assets by 90-day price momentum and rebalances monthly, using pandas and vectorized time-series transformations for backtesting.
 
-The strategy is a basic cross-sectional momentum approach (see Jegadeesh and Titman, 1993), with the focus here on implementation and system design rather than signal innovation.
+This project is structured around common portfolio research workflows, where time-series and cross-sectional financial data are processed into signals, portfolio construction rules, and performance evaluation metrics.
+
+The strategy is a basic cross-sectional momentum approach (see [Jegadeesh and Titman (1993)](https://doi.org/10.1111/j.1540-6261.1993.tb04702.x)). The focus here is on implementation and system design rather than signal innovation.
 
 ## Technical Write-Up
 
