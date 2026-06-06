@@ -25,7 +25,7 @@ class MomentumBacktest:
         self.backtest_engine = BacktestEngine()
         self.benchmark_loader = BenchmarkLoader()
     
-    def run(self) -> dict:
+    def run(self) -> dict[str, object]:
         """
         Execute the backtest.
         
@@ -99,7 +99,7 @@ class MomentumBacktest:
             "outperformance": outperformance,
         }
     
-    def plot_results(self, results: dict) -> None:
+    def plot_results(self, results: dict[str, object]) -> None:
         """
         Plot portfolio performance vs benchmark.
         

@@ -23,7 +23,7 @@ class PortfolioBuilder:
         dates.index = dates
         
         rebalance_dates = dates.resample(freq).last()
-        return rebalance_dates.dropna().values
+        return rebalance_dates.dropna().values # type: ignore[no-any-return]
     
     @staticmethod
     def build_portfolio(df: pd.DataFrame, rebalance_freq: str) -> pd.DataFrame:
