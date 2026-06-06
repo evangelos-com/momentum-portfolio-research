@@ -52,7 +52,6 @@ env/
 # Data files (large, downloaded, or sensitive)
 *.csv
 *.xlsx
-data/
 downloads/
 cache/
 
