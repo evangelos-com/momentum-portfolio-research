@@ -6,7 +6,7 @@ class BacktestEngine:
     """Computes portfolio performance metrics."""
     
     @staticmethod
-    def compute_portfolio_returns(df: pd.DataFrame) -> tuuple[pd.Series, pd.DataFrame]:
+    def compute_portfolio_returns(df: pd.DataFrame) -> tuple[pd.Series, pd.DataFrame]:
         """
         Calculate daily portfolio returns.
         

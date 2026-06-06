@@ -1,5 +1,4 @@
 # momentum_portfolio_research/backtest.py
-from typing import Dict
 from .config import Config
 from .data.loader import DataLoader
 from .signals.engine import SignalEngine
@@ -26,7 +25,7 @@ class MomentumBacktest:
         self.backtest_engine = BacktestEngine()
         self.benchmark_loader = BenchmarkLoader()
     
-    def run(self) -> Dict:
+    def run(self) -> dict:
         """
         Execute the backtest.
         
@@ -100,7 +99,7 @@ class MomentumBacktest:
             "outperformance": outperformance,
         }
     
-    def plot_results(self, results: Dict) -> None:
+    def plot_results(self, results: dict) -> None:
         """
         Plot portfolio performance vs benchmark.
         

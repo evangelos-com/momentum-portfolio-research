@@ -1,7 +1,6 @@
 # momentum_portfolio_research/portfolio/builder.py
 import pandas as pd
 import numpy as np
-from typing import Dict, List
 
 
 class PortfolioBuilder:
@@ -50,7 +49,7 @@ class PortfolioBuilder:
         print(f"Generated {len(rebalance_dates)} rebalance dates")
         
         df["weight"] = 0.0
-        portfolio_tickers: Dict[pd.Timestamp, List[str]] = {}
+        portfolio_tickers: dict[pd.Timestamp, list[str]] = {}
         
         # Assign equal weights to selected stocks on rebalance dates
         for date in rebalance_dates:

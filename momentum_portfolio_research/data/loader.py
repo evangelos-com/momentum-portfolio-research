@@ -1,13 +1,12 @@
 # momentum_portfolio_research/data/loader.py
 import pandas as pd
-from typing import List
 
 
 class DataLoader:
     """Handles fetching and processing price data."""
     
     @staticmethod
-    def load_price_data(tickers: List[str], start_date: str) -> pd.DataFrame:
+    def load_price_data(tickers: list[str], start_date: str) -> pd.DataFrame:
         """
         Download adjusted close prices from Yahoo Finance.
         
